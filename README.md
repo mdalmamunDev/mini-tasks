@@ -1,0 +1,3 @@
+install
+tailwind
+daisy ui

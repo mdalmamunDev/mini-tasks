@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles/index.css"/>
+
+  <!-- tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-900 text-white max-w-screen-2xl mx-auto">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 flex items-center justify-between px-6 py-4 bg-gray-800 z-50">
+    <div class="flex items-center space-x-4">
+      <img src="https://via.placeholder.com/40x40?text=Logo" alt="Logo" class="w-8 h-8">
+      <!-- 3-bar (Hamburger) icon for mobile -->
+      <button class="block md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <!-- Navigation links (visible on larger screens, hidden on mobile) -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="#" class="hover:text-red-500">Tasks</a>
+        <a href="#" class="hover:text-red-500">About</a>
+        <a href="#" class="hover:text-red-500">Contack</a>
+      </nav>
+    </div>
+    <!-- Profile and Search -->
+    <div class="flex items-center space-x-4">
+      <a href="user-dashboard.html" class="hover:text-red-500">Dashboard</a>
+    </div>
+  </header>
+  <!-- Mobile Menu (visible when toggled) -->
+  <div id="mobileMenu" class="md:hidden hidden bg-gray-800 text-white">
+    <nav class="flex flex-col items-start px-6 py-4 pt-20 space-y-4">
+      <a href="index.html" class="hover:text-red-500">Home</a>
+      <a href="#" class="hover:text-red-500">Tasks</a>
+      <a href="#" class="hover:text-red-500">About</a>
+      <a href="#" class="hover:text-red-500">Contack</a>
+    </nav>
+  </div>
+
+
+  <div class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative w-full bg-cover bg-center"
+      style="height: 60vh; background-image: url('https://media.licdn.com/dms/image/D4D12AQHCpFBDpvS6fA/article-cover_image-shrink_720_1280/0/1721475963031?e=2147483647&v=beta&t=9DkXxJobgV8UKGDlqLuvJElxp9kmZhehAsEDP2WuBL0')">
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+      <div class="absolute bottom-2 z-10 p-6 md:p-12">
+        <h1 class="text-3xl md:text-4xl font-bold">Mini Task এ আপনাকে স্বাগতম।</h1>
+        <p class="text-sm md:text-lg mt-2 max-w-lg">Exciting movie description goes here to attract the audience’s attention.</p>
+        <div class="flex items-center space-x-4 mt-4">
+          <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">Login</button>
+          <button class="bg-gray-700 text-white px-4 py-2 rounded-md">Register</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="p-6 md:p-12 space-y-8">
+      <!-- Trending Section -->
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Trending Tasks</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Movie Card -->
+          <div class="bg-gradient-to-br from-blue-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto text-white">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">Amount: <span class="text-green-400">৳5.00</span></h2>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm">অফিসিয়াল টেলিগ্রাম চ্যানেলে জয়েন করা</p>
+            <button  class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105">
+              Complete Now
+            </button>
+          </div>
+          <div class="bg-gradient-to-br from-blue-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto text-white">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">Amount: <span class="text-green-400">৳5.00</span></h2>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm">অফিসিয়াল টেলিগ্রাম চ্যানেলে জয়েন করা</p>
+            <button  class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105">
+              Complete Now
+            </button>
+          </div>
+          <div class="bg-gradient-to-br from-blue-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto text-white">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">Amount: <span class="text-green-400">৳5.00</span></h2>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm">অফিসিয়াল টেলিগ্রাম চ্যানেলে জয়েন করা</p>
+            <button  class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105">
+              Complete Now
+            </button>
+          </div>
+          <div class="bg-gradient-to-br from-blue-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto text-white">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">Amount: <span class="text-green-400">৳5.00</span></h2>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm">অফিসিয়াল টেলিগ্রাম চ্যানেলে জয়েন করা</p>
+            <button  class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105">
+              Complete Now
+            </button>
+          </div>
+          <div class="bg-gradient-to-br from-blue-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto text-white">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">Amount: <span class="text-green-400">৳5.00</span></h2>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm">অফিসিয়াল টেলিগ্রাম চ্যানেলে জয়েন করা</p>
+            <button  class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105">
+              Complete Now
+            </button>
+          </div>
+          <div class="bg-gradient-to-br from-blue-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto text-white">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">Amount: <span class="text-green-400">৳5.00</span></h2>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm">অফিসিয়াল টেলিগ্রাম চ্যানেলে জয়েন করা</p>
+            <button  class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105">
+              Complete Now
+            </button>
+          </div>
+          <div class="bg-gradient-to-br from-blue-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto text-white">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">Amount: <span class="text-green-400">৳5.00</span></h2>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm">অফিসিয়াল টেলিগ্রাম চ্যানেলে জয়েন করা</p>
+            <button  class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105">
+              Complete Now
+            </button>
+          </div>
+          <div class="bg-gradient-to-br from-blue-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto text-white">
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">Amount: <span class="text-green-400">৳5.00</span></h2>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm">অফিসিয়াল টেলিগ্রাম চ্যানেলে জয়েন করা</p>
+            <button  class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105">
+              Complete Now
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-800 rounded-md">
+        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="mr-auto place-self-center lg:col-span-7">
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">Stay connect with us</h1>
+                <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+                <div class="flex gap-4">
+                  <a href="#">
+                    <img class="w-8 h-8" src="assets/icons/whatsapp.png" alt="whatsapp">
+                  </a>
+                  <a href="#">
+                    <img class="w-8 h-8" src="assets/icons/telegram.png" alt="telegram">
+                  </a>
+                  <a href="#">
+                    <img class="w-8 h-8" src="assets/icons/twitter.png" alt="twitter">
+                  </a>
+                  <a href="#">
+                    <img class="w-8 h-8" src="assets/icons/facebook.png" alt="facebook">
+                  </a>
+                </div>
+            </div>
+            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
+            </div>                
+        </div>
+    </section>
+    </main>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://mdalmamundev.github.io/" class="hover:underline">Md. Al Mamun</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">About</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline">Contact</a>
+        </li>
+    </ul>
+    </div>
+  </footer>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="scripts/index.js"></script>
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

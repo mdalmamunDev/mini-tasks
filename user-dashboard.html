@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('default-sidebar');
+            sidebar.classList.toggle('-translate-x-full');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+    <!-- Hamburger Button (Visible on small screens) -->
+    <button onclick="toggleSidebar()" aria-controls="default-sidebar" type="button"
+        class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+        </svg>
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="default-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-800">
+            <!-- Close Button (Top of Sidebar) -->
+            <button onclick="toggleSidebar()" class="sm:hidden text-gray-400 hover:text-white absolute top-4 right-4">
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd" fill-rule="evenodd"
+                        d="M6.293 4.293a1 1 0 011.414 0L10 6.586l2.293-2.293a1 1 0 111.414 1.414L11.414 8l2.293 2.293a1 1 0 01-1.414 1.414L10 9.414l-2.293 2.293a1 1 0 01-1.414-1.414L8.586 8 6.293 5.707a1 1 0 010-1.414z">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Profile Section -->
+            <div class="flex items-center space-x-4 mb-8 mt-12">
+                <img src="https://i.pravatar.cc/150?img=3" alt="User Avatar" class="w-16 h-16 rounded-full">
+                <div>
+                    <h2 class="text-lg font-semibold text-white">John Doe</h2>
+                    <p class="text-sm text-gray-400">100 BDT</p>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu Items -->
+            <ul class="space-y-2 font-medium">
+                <li class="flex justify-between">
+                    <a href="user-dashboard.html" class="flex items-center p-2 text-gray-200 rounded-lg dark:hover:bg-gray-700 group">
+                        <div class="w-5 h-5 text-gray-400 transition duration-75 dark:text-gray-500 group-hover:text-gray-200 dark:group-hover:text-white">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <span class="ms-3">Dashboard</span>
+                    </a>
+                </li>
+                <li class="flex justify-between">
+                    <a href="my-tasks.html" class="flex items-center p-2 text-gray-200 rounded-lg dark:hover:bg-gray-700 group">
+                        <div class="w-5 h-5 text-gray-400 transition duration-75 dark:text-gray-500 group-hover:text-gray-200 dark:group-hover:text-white">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <span class="ms-3">My Tasks</span>
+                    </a>
+                </li>
+                <li class="flex justify-between">
+                    <a href="index.html" class="flex items-center p-2 text-gray-200 rounded-lg dark:hover:bg-gray-700 group">
+                        <div class="w-5 h-5 text-gray-400 transition duration-75 dark:text-gray-500 group-hover:text-gray-200 dark:group-hover:text-white">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <span class="ms-3">Back Home</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="p-4 sm:ml-64">
+        <img class="mb-5" src="assets/images/welcome-back.gif" alt="">
+
+        <section class="mb-5 flex flex-col md:flex-row gap-6">
+            <!-- Completed Withdraw Card -->
+            <div class="bg-gradient-to-r from-pink-500 to-purple-500 p-6 rounded-lg shadow-lg">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="bg-orange-500 rounded-full w-10 h-10 p-2 text-center text-2xl">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white text-lg font-semibold">Completed Withdraw</h2>
+                        <p class="text-white text-2xl font-bold">0.00 BDT</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-4 text-sm text-gray-300">
+                    <div class="p-2 bg-gray-800 rounded-lg text-center">
+                        <p class="font-semibold">Submitted</p>
+                        <p class="font-bold">৳0.00</p>
+                    </div>
+                    <div class="p-2 bg-gray-800 rounded-lg text-center">
+                        <p class="font-semibold">Pending</p>
+                        <p class="font-bold">৳0.00</p>
+                    </div>
+                    <div class="p-2 bg-gray-800 rounded-lg text-center">
+                        <p class="font-semibold">Rejected</p>
+                        <p class="font-bold">৳0.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Completed Withdraw Card -->
+            <div class="bg-gradient-to-r from-pink-500 to-purple-500 p-6 rounded-lg shadow-lg">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="bg-orange-500 rounded-full w-10 h-10 p-2 text-center text-2xl">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white text-lg font-semibold">Total Earnings</h2>
+                        <p class="text-white text-2xl font-bold">0.00 BDT</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-4 text-sm text-gray-300">
+                    <div class="p-2 bg-gray-800 rounded-lg text-center">
+                        <p class="font-semibold">Submitted</p>
+                        <p class="font-bold">৳0.00</p>
+                    </div>
+                    <div class="p-2 bg-gray-800 rounded-lg text-center">
+                        <p class="font-semibold">Pending</p>
+                        <p class="font-bold">৳0.00</p>
+                    </div>
+                    <div class="p-2 bg-gray-800 rounded-lg text-center">
+                        <p class="font-semibold">Rejected</p>
+                        <p class="font-bold">৳0.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-5">
+            <div class="bg-red-600 flex flex-col items-center justify-center p-3 rounded">
+                <img class="rounded-full w-24 h-24 border" src="assets/images/fliying-telegram.webp" alt="">
+                <h2 class="bold">আমাদের অফিসিয়াল Telegram গ্রুপ এ নিচের বাটনে ক্লিক করে জয়েন করুন</h2>
+                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">JOIN হতে এইখানে ক্লিক করুন</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
