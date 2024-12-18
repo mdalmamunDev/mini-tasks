@@ -1,3 +1,1 @@
-install
-tailwind
-daisy ui
+https://quantumquick.shop/
